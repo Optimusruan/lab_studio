@@ -4,10 +4,17 @@ package model;
 import javax.persistence.*;
 import java.sql.Timestamp;
 
-@Entity
+/*
+ @Entity: 定义数据表对象
+ @Id: 声明主键
+ @Column: 声明列
+ @GeneratedValue: 主键生成方式
+ @Table: 定义数据表
+*/
 
-@Table(name = "member")
-public class Member {
+@Entity
+@Table(name = "lab_member")
+public class MemberEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "member_id")
@@ -36,6 +43,9 @@ public class Member {
 
     @Column(name = "checked")
     private int checked;
+
+    @Column(name = "enable")
+    private int enable;
 
     public int getMemberId() {
         return memberId;
@@ -107,5 +117,13 @@ public class Member {
 
     public void setChecked(int checked) {
         this.checked = checked;
+    }
+
+    public int getEnable() {
+        return enable;
+    }
+
+    public void setEnable(int enable) {
+        this.enable = enable;
     }
 }

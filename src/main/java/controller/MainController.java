@@ -1,7 +1,7 @@
 package controller;
 
 import dao.MemberRepository;
-import model.Member;
+import model.MemberEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,12 +25,12 @@ public class MainController {
     }
 
     @GetMapping("/test")
-    public @ResponseBody Iterable<Member> getAllMembers(){
+    public @ResponseBody Iterable<MemberEntity> getAllMembers(){
         return memberRepository.findAll();
     }
 
     @GetMapping("/testid")
-    public @ResponseBody Iterable<Member> getMembersById(@RequestParam String id){
+    public @ResponseBody Iterable<MemberEntity> getMembersById(@RequestParam String id){
         return memberRepository.findByMemberId(Integer.parseInt(id));
     }
 //    @GetMapping("/rest/sliderData")
