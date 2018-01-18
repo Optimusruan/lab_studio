@@ -34,5 +34,9 @@ public class MainController {
         return memberRepository.findByMemberId(Integer.parseInt(id));
     }
 //    @GetMapping("/rest/sliderData")
+    @RequestMapping("/webroot/test")
+    public String test1(){
+        return "webroot/test1";
+    }
 
 }
