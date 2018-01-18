@@ -39,4 +39,8 @@ public class MainController {
         return "webroot/test1";
     }
 
+    @RequestMapping("/admin2018lab/index")
+    public String adminIndex(){
+        return "adminback/index";
+    }
 }
