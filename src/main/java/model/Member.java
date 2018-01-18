@@ -1,8 +1,6 @@
 package model;
 
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-
 import javax.persistence.*;
 import java.sql.Timestamp;
 
@@ -12,94 +10,95 @@ import java.sql.Timestamp;
 public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int member_id;
+    @Column(name = "member_id")
+    private int memberId;
 
-    @Column(length = 50)
-    private String member_name;
+    @Column(length = 50,name = "member_name")
+    private String memberName;
 
-    @Column(length = 50)
-    private String member_phone;
+    @Column(length = 50,name = "member_phone")
+    private String memberPhone;
 
-    @Column(length = 300)
-    private String member_photo;
+    @Column(length = 300,name = "member_photo")
+    private String memberPhoto;
 
-    @Column()
-    private String member_breviary;
+    @Column(name = "member_breviary")
+    private String memberBreviary;
 
-    @Column()
-    private String t_id;
+    @Column(name = "t_id")
+    private int tId;
 
-    @Column()
-    private Timestamp create_time;
+    @Column(name = "create_time")
+    private Timestamp createTime;
 
-    @Column()
-    private Timestamp checktime;
+    @Column(name = "checktime")
+    private Timestamp checkTime;
 
-    @Column()
+    @Column(name = "checked")
     private int checked;
 
-    public int getMember_id() {
-        return member_id;
+    public int getMemberId() {
+        return memberId;
     }
 
-    public void setMember_id(int member_id) {
-        this.member_id = member_id;
+    public void setMemberId(int memberId) {
+        this.memberId = memberId;
     }
 
-    public String getMember_name() {
-        return member_name;
+    public String getMemberName() {
+        return memberName;
     }
 
-    public void setMember_name(String member_name) {
-        this.member_name = member_name;
+    public void setMemberName(String memberName) {
+        this.memberName = memberName;
     }
 
-    public String getMember_phone() {
-        return member_phone;
+    public String getMemberPhone() {
+        return memberPhone;
     }
 
-    public void setMember_phone(String member_phone) {
-        this.member_phone = member_phone;
+    public void setMemberPhone(String memberPhone) {
+        this.memberPhone = memberPhone;
     }
 
-    public String getMember_photo() {
-        return member_photo;
+    public String getMemberPhoto() {
+        return memberPhoto;
     }
 
-    public void setMember_photo(String member_photo) {
-        this.member_photo = member_photo;
+    public void setMemberPhoto(String memberPhoto) {
+        this.memberPhoto = memberPhoto;
     }
 
-    public String getMember_breviary() {
-        return member_breviary;
+    public String getMemberBreviary() {
+        return memberBreviary;
     }
 
-    public void setMember_breviary(String member_breviary) {
-        this.member_breviary = member_breviary;
+    public void setMemberBreviary(String memberBreviary) {
+        this.memberBreviary = memberBreviary;
     }
 
-    public String getT_id() {
-        return t_id;
+    public int gettId() {
+        return tId;
     }
 
-    public void setT_id(String t_id) {
-        this.t_id = t_id;
+    public void settId(int tId) {
+        this.tId = tId;
     }
 
-    public Timestamp getCreate_time() {
-        return create_time;
+    public Timestamp getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(Timestamp create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Timestamp createTime) {
+        this.createTime = createTime;
     }
 
-    public Timestamp getChecktime() {
-        return checktime;
+    public Timestamp getCheckTime() {
+        return checkTime;
     }
 
-    public void setChecktime(Timestamp checktime) {
-        this.checktime = checktime;
+    public void setCheckTime(Timestamp checkTime) {
+        this.checkTime = checkTime;
     }
 
     public int getChecked() {

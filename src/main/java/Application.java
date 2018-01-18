@@ -1,12 +1,13 @@
-package controller;
+
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication
-@EnableConfigurationProperties
+@SpringBootApplication(scanBasePackages = {"dao","controller"})
+@EnableJpaRepositories("dao")
 @EntityScan(basePackages = {"model"})
 public class Application {
 
