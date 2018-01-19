@@ -1,7 +1,7 @@
 package controller;
 
 import dao.MemberRepository;
-import model.Member;
+import model.MemberEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,7 +36,7 @@ public class MainController {
     @GetMapping("/liyuindex")
     public String getIndex()
     {
-        return "index";
+        return "webroot/index";
     }
 //    @GetMapping("/rest/sliderData")
     @RequestMapping("/webroot/test")
@@ -48,4 +48,6 @@ public class MainController {
     public String adminIndex(){
         return "adminback/index";
     }
+
+
 }
