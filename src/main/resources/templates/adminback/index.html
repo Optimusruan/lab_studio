@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+
+        .top {
+            width: 100%;
+            background: #515151;
+            height: 50px;
+            color: #fff;
+        }
+
+        .top-logo {
+            height: 100%;
+            width: 150px;
+            font-size: 1.5em;
+            padding: 10px;
+        }
+
+        .left {
+            height: 100%;
+            background: #2e2e2e;
+            width: 180px;
+            position: fixed;
+            overflow: hidden;
+            z-index: 30;
+        }
+
+        .side-item {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .sidebar {
+            background: #333540;
+        }
+
+        .sidebar ul {
+            margin: 0;
+        }
+
+        .sidebar a:link {
+            color: #fff;
+        }
+
+        .sidebar a:hover {
+            text-decoration: none;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+        }
+
+        .side-title {
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        .side-title:hover {
+            background: #38d8ce;
+        }
+
+        .side-item > li > a {
+            display: inline-block;
+            width: 100%;
+        }
+        .side-title a{
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+        }
+        .side-title>a>i {
+            display: inline-block;
+            color: white;
+            float: left;
+            font-size: 1.5em;
+            padding-right: 10px;
+        }
+        .side-title>a>span{
+            padding: 5px 0;
+            font-size: 1.1em;
+        }
+        .side-item > li > a {
+            padding: 10px;
+            color: white;
+        }
+
+        .side-item > li > a:hover {
+            background: rgba(255, 255, 255, 0.33);
+        }
+
+    </style>
+</head>
+<body>
+<div class="top">
+    <div class="top-logo">后台管理</div>
+</div>
+<div class="left">
+    <div class="sidebar">
+        <div class="side-title"><a href="#ce1" class="collapsed " role="button" data-toggle="collapse"
+                                   aria-controls="ce1" aria-expanded="false"><i class="fa fa-asterisk"></i><span>第一侧边栏</span></a></div>
+        <div class="collapse" id="ce1">
+            <ul class="side-item">
+                <li><a href="">跳转1</a></li>
+                <li><a href="">跳转2</a></li>
+                <li><a href="">跳转3</a></li>
+                <li><a href="">跳转4</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="side-title"><a href="#ce2" class="collapsed" role="button" data-toggle="collapse"
+                                   aria-controls="ce2" aria-expanded="false"><i class="fa fa-bell"></i><span>第二侧边栏</span></a></div>
+        <div class="collapse" id="ce2">
+            <ul class="side-item">
+                <li><a href="">跳转1</a></li>
+                <li><a href="">跳转2</a></li>
+                <li><a href="">跳转3</a></li>
+                <li><a href="">跳转4</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="side-title">
+            <a href="#ce3" class="collapsed " role="button" data-toggle="collapse" aria-controls="ce3" aria-expanded="false"><i class="fa fa-puzzle-piece"></i><span>第三侧边栏</span></a></div>
+        <div class="collapse" id="ce3">
+            <ul class="side-item">
+                <li><a href="">跳转1</a></li>
+                <li><a href="">跳转2</a></li>
+                <li><a href="">跳转3</a></li>
+                <li><a href="">跳转4</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-3.1.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

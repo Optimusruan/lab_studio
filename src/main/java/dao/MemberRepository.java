@@ -2,13 +2,13 @@ package dao;
 
 
 import org.springframework.data.repository.CrudRepository;
-import model.Member;
+import model.MemberEntity;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
 
 @Repository
-public interface MemberRepository extends CrudRepository<Member,Long> {
+public interface MemberRepository extends CrudRepository<MemberEntity,Long> {
     @Transactional
-    Iterable<Member> findByMemberId(int id);
+    Iterable<MemberEntity> findByMemberId(int id);
 }

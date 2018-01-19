@@ -25,12 +25,12 @@ public class MainController {
     }
 
     @GetMapping("/test")
-    public @ResponseBody Iterable<Member> getAllMembers(){
+    public @ResponseBody Iterable<MemberEntity> getAllMembers(){
         return memberRepository.findAll();
     }
 
     @GetMapping("/testid")
-    public @ResponseBody Iterable<Member> getMembersById(@RequestParam String id){
+    public @ResponseBody Iterable<MemberEntity> getMembersById(@RequestParam String id){
         return memberRepository.findByMemberId(Integer.parseInt(id));
     }
     @GetMapping("/liyuindex")
@@ -38,5 +38,14 @@ public class MainController {
     {
         return "index";
     }
+//    @GetMapping("/rest/sliderData")
+    @RequestMapping("/webroot/test")
+    public String test1(){
+        return "webroot/test1";
+    }
 
+    @RequestMapping("/admin2018lab/index")
+    public String adminIndex(){
+        return "adminback/index";
+    }
 }
