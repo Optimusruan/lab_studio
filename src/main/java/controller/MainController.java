@@ -1,7 +1,7 @@
 package controller;
 
 import dao.MemberRepository;
-import model.MemberEntity;
+import model.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,6 +32,11 @@ public class MainController {
     @GetMapping("/testid")
     public @ResponseBody Iterable<MemberEntity> getMembersById(@RequestParam String id){
         return memberRepository.findByMemberId(Integer.parseInt(id));
+    }
+    @GetMapping("/liyuindex")
+    public String getIndex()
+    {
+        return "index";
     }
 //    @GetMapping("/rest/sliderData")
     @RequestMapping("/webroot/test")
