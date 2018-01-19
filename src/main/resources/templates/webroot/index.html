@@ -62,7 +62,7 @@
             <div class="sl-slide item1" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
                 <div class="sl-slide-inner">
                     <div class="container">
-                        <img class="pull-right" src="images/sample/slider/img1.png" alt="" />
+                        <img class="pull-right" id="home-slider1" src="images/sample/slider/img1.png" alt="" />
                         <h2>Our Workshop</h2>
                         <h3 class="gap">Introduction of our workshop</h3>
                         <a class="btn btn-large btn-transparent" href="#services">Learn More</a>
@@ -75,7 +75,7 @@
             <div class="sl-slide item2" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
                 <div class="sl-slide-inner">
                     <div class="container">
-                        <img class="pull-right" src="images/sample/slider/img2.png" alt="" />
+                        <img class="pull-right" id="home-slider2" src="images/sample/slider/img2.png" alt="" />\
                         <h2>Our Recent Works</h2>
                         <h3 class="gap">Introduction of our recent works</h3>
                         <a class="btn btn-large btn-transparent" href="#recent-works">Learn More</a>
@@ -88,7 +88,7 @@
             <div class="sl-slide item3" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
                 <div class="sl-slide-inner">
                     <div class="container">
-                        <img class="pull-right" src="images/sample/slider/img3.png" alt="" />
+                        <img class="pull-right" id="home-slider3" src="images/sample/slider/img3.png" alt="" />
                         <h2>Our Team</h2>
                         <h3 class="gap">Introduction of our team</h3>
                         <a class="btn btn-large btn-transparent" href="#clients">Learn More</a>
@@ -167,104 +167,22 @@
 <!--/Services-->
 
 <section id="recent-works">
-    <div class="container">
         <div class="center">
             <h3>Our Recent Works</h3>
-            <p class="lead">Look at some of the recent projects we have completed for our valuble clients</p>
+            <p class="lead" id="pp">Look at some of the recent projects we have completed for our valuble clients</p>
         </div>
-        <div class="gap"></div>
-        <ul class="gallery col-4">
-            <!--Item 1-->
-            <li>
-                <div class="preview">
-                    <img alt=" " src="images/portfolio/thumb/item1.jpg">
-                    <div class="overlay">
+            <div class="container main" id="project">
+                    <div class="row-fluid">
+                        <div class="span3" v-for="project in projects">
+                            <div class="box">
+                                <p><img id="project1" src="images/sample/team1.jpg" alt="" ></p>
+                                <h5>{{project.title}}</h5>
+                                <p>{{project.des}}</p>
+                                <a class="btn btn-social btn-facebook" href="#"><i class="icon-facebook"></i></a> <a class="btn btn-social btn-google-plus" href="#"><i class="icon-google-plus"></i></a> <a class="btn btn-social btn-twitter" href="#"><i class="icon-twitter"></i></a> <a class="btn btn-social btn-linkedin" href="#"><i class="icon-linkedin"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="links">
-                        <a data-toggle="modal" href="#modal-1"><i class="icon-eye-open"></i></a><a href="#"><i class="icon-link"></i></a>
-                    </div>
-                </div>
-                <div class="desc">
-                    <h5>Lorem ipsum dolor sit amet</h5>
-                </div>
-                <div id="modal-1" class="modal hide fade">
-                    <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
-                    <div class="modal-body">
-                        <img src="images/portfolio/full/item1.jpg" alt=" " width="100%" style="max-height:400px">
-                    </div>
-                </div>
-            </li>
-            <!--/Item 1-->
-
-            <!--Item 2-->
-            <li>
-                <div class="preview">
-                    <img alt=" " src="images/portfolio/thumb/item2.jpg">
-                    <div class="overlay">
-                    </div>
-                    <div class="links">
-                        <a data-toggle="modal" href="#modal-1"><i class="icon-eye-open"></i></a><a href="#"><i class="icon-link"></i></a>
-                    </div>
-                </div>
-                <div class="desc">
-                    <h5>Lorem ipsum dolor sit amet</h5>
-                </div>
-                <div id="modal-1" class="modal hide fade">
-                    <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
-                    <div class="modal-body">
-                        <img src="images/portfolio/full/item2.jpg" alt=" " width="100%" style="max-height:400px">
-                    </div>
-                </div>
-            </li>
-            <!--/Item 2-->
-
-            <!--Item 3-->
-            <li>
-                <div class="preview">
-                    <img alt=" " src="images/portfolio/thumb/item3.jpg">
-                    <div class="overlay">
-                    </div>
-                    <div class="links">
-                        <a data-toggle="modal" href="#modal-3"><i class="icon-eye-open"></i></a><a href="#"><i class="icon-link"></i></a>
-                    </div>
-                </div>
-                <div class="desc">
-                    <h5>Lorem ipsum dolor sit amet</h5>
-                </div>
-                <div id="modal-3" class="modal hide fade">
-                    <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
-                    <div class="modal-body">
-                        <img src="images/portfolio/full/item3.jpg" alt=" " width="100%" style="max-height:400px">
-                    </div>
-                </div>
-            </li>
-            <!--/Item 3-->
-
-            <!--Item 4-->
-            <li>
-                <div class="preview">
-                    <img alt=" " src="images/portfolio/thumb/item4.jpg">
-                    <div class="overlay">
-                    </div>
-                    <div class="links">
-                        <a data-toggle="modal" href="#modal-4"><i class="icon-eye-open"></i></a><a href="#"><i class="icon-link"></i></a>
-                    </div>
-                </div>
-                <div class="desc">
-                    <h5>Lorem ipsum dolor sit amet</h5>
-                </div>
-                <div id="modal-4" class="modal hide fade">
-                    <a class="close-modal" href="javascript:;" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></a>
-                    <div class="modal-body">
-                        <img src="images/portfolio/full/item4.jpg" alt=" " width="100%" style="max-height:400px">
-                    </div>
-                </div>
-            </li>
-            <!--/Item 4-->
-
-        </ul>
-    </div>
-
+            </div>
 </section>
 
 <section id="clients" class="main">
@@ -532,27 +450,84 @@
         Page.init();
     });
 
-    var server_url="/testid?id=1";//服务器url
+    var server_url="testid?id=1";//服务器url
+    //改变轮播图
+    $.ajax({
+        url:server_url+"",
+        success:function(msg){
+            document.getElementById("home-slider1").src=" ";
+            document.getElementById("home-slider2").src=" ";
+            document.getElementById("home-slider3").src=" ";
+        },
+        error:function(xhr){
+            console.log(xhr);
+        }
+    });
 
-
-    var vu1=new Vue({
+    $.ajax({
+        url:server_url+"",
+        success:function(msg){
+            document.getElementById("member1").src=" ";
+            document.getElementById("member2").src=" ";
+            document.getElementById("member3").src=" ";
+        },
+        error:function(xhr){
+            console.log(xhr);
+        }
+    });
+    var vue1=new Vue({
         el:'#about-workshop',
         data:{
             message:' '
         },
         created: function () {
+            var self=this;
+            //得到文章简介；
             $.ajax({
-                url:server_url,
+                url:server_url+"",
                 success:function (msg) {
-                    this.data=msg[0].tId;
+                    self.message=msg[0].memberName;
                 },
                 error:function (xhr) {
                     console.log(xhr);
                 }
-                })
+                });
         }
         })
-
+    var vue2=new Vue({
+        el:'#project',
+        data:{
+            projects:[{"title":"hello"},{"title":"world"}]
+        },
+        created: function () {
+            var self=this;
+            //得到项目简介；
+            $.ajax({
+                url:server_url+"",
+                success:function (msg) {
+                        self.project1_title=msg[0].projectName;
+                        self.project2_title=msg[1].projectName;
+                        self.project3_title=msg[2].projectName;
+                        self.project4_title=msg[3].projectName;
+                        $.get(server_url+'',msg[0].t_Id,function () {
+                            self.project1_des=data.t_url;
+                            }
+                        );
+                        $.get(server_url+'',msg[0].t_Id,function () {
+                            self.project1_des=data.t_url;
+                          }
+                        );
+                        $.get(server_url+'',msg[0].t_Id,function () {
+                            self.project1_des=data.t_url;
+                         }
+                        );
+                },
+                error:function (xhr) {
+                    console.log(xhr);
+                }
+            });
+        }
+    })
 
 </script>
 <!-- /SL Slider -->
