@@ -50,7 +50,7 @@ public class TEntity {
     @Column(name = "checked")
     private int checked;
 
-    @Column(name = "enable")
+    @Column(name = "enabled")
     private int enable;
 
     public int gettId() {

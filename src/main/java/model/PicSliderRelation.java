@@ -24,4 +24,6 @@ public class PicSliderRelation {
 
     @Column(name = "slider_id")
     private int sliderId;
+
+
 }

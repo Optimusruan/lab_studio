@@ -24,7 +24,7 @@ public class TagEntity {
     @Column(name = "checked")
     private int checked;
 
-    @Column(name = "enable")
+    @Column(name = "enabled")
     private int enable;
 
     public int getTagId() {
