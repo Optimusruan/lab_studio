@@ -33,6 +33,10 @@ public class MainController {
     public @ResponseBody Iterable<Member> getMembersById(@RequestParam String id){
         return memberRepository.findByMemberId(Integer.parseInt(id));
     }
-//    @GetMapping("/rest/sliderData")
+    @GetMapping("/liyuindex")
+    public String getIndex()
+    {
+        return "index";
+    }
 
 }
