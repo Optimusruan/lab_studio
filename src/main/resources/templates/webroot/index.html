@@ -2,7 +2,8 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" xmlns:style="http://www.w3.org/1999/xhtml"> <!--<![endif]-->
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -24,6 +25,11 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png"/>
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -91,7 +97,8 @@
                         <img class="pull-right" src="images/sample/slider/img3.png" alt="" />
                         <h2>Our Team</h2>
                         <h3 class="gap">Introduction of our team</h3>
-                        <a class="btn btn-large btn-transparent" href="#clients">Learn More</a>
+                       <a class="btn btn-large btn-transparent" href="#clients">Learn More</a>
+
                     </div>
                 </div>
             </div>
@@ -267,60 +274,87 @@
 
 </section>
 
+
+<!--关于工作室成员的介绍-->
 <section id="clients" class="main">
-    <div class="container">
-        <div class="row-fluid">
-            <div class="span2">
-                <div class="clearfix">
-                    <h4 class="pull-left">OUR PARTNERS</h4>
-                    <div class="pull-right">
-                        <a class="prev" href="#myCarousel" data-slide="prev"><i class="icon-angle-left icon-large"></i></a> <a class="next" href="#myCarousel" data-slide="next"><i class="icon-angle-right icon-large"></i></a>
-                    </div>
-                </div>
-                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-            </div>
-            <div class="span10">
-                <div id="myCarousel" class="carousel slide clients">
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                        <div class="active item">
-                            <div class="row-fluid">
-                                <ul class="thumbnails">
-                                    <li class="span3"><a href="#"><img src="images/sample/clients/client1.png"></a></li>
-                                    <li class="span3"><a href="#"><img src="images/sample/clients/client2.png"></a></li>
-                                    <li class="span3"><a href="#"><img src="images/sample/clients/client3.png"></a></li>
-                                    <li class="span3"><a href="#"><img src="images/sample/clients/client4.png"></a></li>
-                                </ul>
-                            </div>
-                        </div>
+    <div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span1"></div>
+        <div class="span2">
+            <div class="box">
+                <p align="center"><img src="images/sample/team1.jpg" alt="" id="member_photo"></p>
+                <a href="#">
+                    <p id="member_name1"><span class="glyphicon glyphicon-user" ></span>:{{message}}</p>
+                </a>
+                <a href="#">
+                    <p id="member_phone1"><span class="glyphicon glyphicon-earphone"></span>:{{message}}</p>
+                </a>
+                <p id="member_breviary1">{{message}}</p><br />
+                <p align="right"><a class="btn btn-social  btn-info" href="#"  onclick="btnfunction()">more</a></p>
 
-                        <div class="item">
-                            <div class="row-fluid">
-                                <ul class="thumbnails">
-                                    <li class="span3"><a href="#"><img src="images/sample/clients/client4.png"></a></li>
-                                    <li class="span3"><a href="#"><img src="images/sample/clients/client3.png"></a></li>
-                                    <li class="span3"><a href="#"><img src="images/sample/clients/client2.png"></a></li>
-                                    <li class="span3"><a href="#"><img src="images/sample/clients/client1.png"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="item">
-                            <div class="row-fluid">
-                                <ul class="thumbnails">
-                                    <li class="span3"><a href="#"><img src="images/sample/clients/client1.png"></a></li>
-                                    <li class="span3"><a href="#"><img src="images/sample/clients/client2.png"></a></li>
-                                    <li class="span3"><a href="#"><img src="images/sample/clients/client3.png"></a></li>
-                                    <li class="span3"><a href="#"><img src="images/sample/clients/client4.png"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /Carousel items -->
-
-                </div>
             </div>
         </div>
+
+        <div class="span2">
+            <div class="box">
+                <p align="center"><img src="images/sample/team2.jpg" alt="" ></p>
+                <a href="#">
+                    <p id="member_name2"><span class="glyphicon glyphicon-user" ></span>:{{message}}</p>
+                </a>
+                <a href="#">
+                    <p id="member_phone2"><span class="glyphicon glyphicon-earphone"></span>:{{message}}</p>
+                </a>
+                <p id="member_breviary2">{{message}}</p><br />
+                <p align="right"><a class="btn btn-social  btn-info" href="#"  onclick="btnfunction()">more</a></p>
+
+            </div>
+        </div>
+
+        <div class="span2">
+            <div class="box">
+                <p align="center"><img src="images/sample/team4.jpg" alt="" ></p>
+                <a href="#">
+                    <p id="member_name3"><span class="glyphicon glyphicon-user" ></span>:{{message}}</p>
+                </a>
+                <a href="#">
+                    <p id="member_phone3"><span class="glyphicon glyphicon-earphone"></span>:{{message}}</p>
+                </a>
+                <p id="member_breviary3">{{message}}</p><br />
+                <p align="right"><a class="btn btn-social  btn-info" href="#"  onclick="btnfunction()">more</a></p>
+            </div>
+        </div>
+
+        <div class="span2">
+            <div class="box">
+                <p align="center"><img src="images/sample/team3.jpg" alt="" ></p>
+                <a href="#">
+                    <p id="member_name4"><span class="glyphicon glyphicon-user" ></span>:{{message}}</p>
+                </a>
+                <a href="#">
+                    <p id="member_phone4"><span class="glyphicon glyphicon-earphone"></span>:{{message}}</p>
+                </a>
+                <p id="member_breviary4">{{message}}</p><br />
+                <p align="right"><a class="btn btn-social  btn-info" href="#"  onclick="btnfunction()">more</a></p>
+            </div>
+        </div>
+
+        <div class="span2">
+            <div class="box">
+                <p align="center"><img src="images/sample/team4.jpg" alt="" ></p>
+                <a href="#">
+                    <p id="member_name5"><span class="glyphicon glyphicon-user" ></span>:{{message}}</p>
+                </a>
+                <a href="#">
+                    <p id="member_phone5"><span class="glyphicon glyphicon-earphone"></span>:{{message}}</p>
+                </a>
+                <p id="member_breviary5">{{message}}</p><br />
+                <p align="right"><a class="btn btn-social  btn-info" href="#"  onclick="btnfunction()">more</a></p>
+            </div>
+        </div>
+        <div class="span1"></div>
+    </div>
+    <p>&nbsp;</p>
+    <p></p>
     </div>
 </section>
 
@@ -534,7 +568,6 @@
 
     var server_url="/testid?id=1";//服务器url
 
-
     var vu1=new Vue({
         el:'#about-workshop',
         data:{
@@ -550,11 +583,108 @@
                     console.log(xhr);
                 }
                 })
-        }
+            }
         })
+
+</script>
+
+<!--获取成员照片-->
+<script type="text/javascript">
+    var server_url="/testid?id=1";//服务器url
+    var vu2=new Vue({
+       el:'#member_photo',
+        data:{
+           member_photourl:' '
+       }
+        /*created: function () {
+            $.ajax({
+                url:server_url,
+                success:function (msg) {
+                    this.data=msg[0].tId;
+                },
+                error:function (xhr) {
+                    console.log(xhr);
+                }
+            })
+        }*/
+    })
+
 
 
 </script>
-<!-- /SL Slider -->
+
+<!--获取成员姓名-->
+<script type="text/javascript">
+    var server_url="/testid?id=1";//服务器url
+    var vu3=new Vue({
+        el:'#member_name1',
+
+        data:{
+            message:' '
+        },
+        created: function () {
+            var self=this;
+            $.ajax({
+                url:server_url,
+                success:function (msg) {
+                    this.data=msg[0].tId;
+                },
+                error:function (xhr) {
+                    console.log(xhr);
+                }
+            })
+        }
+    })
+</script>
+
+
+<!--获取成员联系方式-->
+<script type="text/javascript">
+    var server_url="/testid?id=1";//服务器url
+    var vu4=new Vue({
+
+        el:'#member_phone1',
+        data:{
+            message:' '
+        },
+        created: function () {
+            var self=this;
+            $.ajax({
+                url:server_url,
+                success:function (msg) {
+                    this.data=msg[0].tId;
+                },
+                error:function (xhr) {
+                    console.log(xhr);
+                }
+            })
+        }
+    })
+
+</script>
+<!--获取成员介绍-->
+<script type="text/javascript">
+    var server_url="/testid?id=1";//服务器url
+    var vu5=new Vue({
+
+        el:'#member_breviary1',
+        data:{
+            message:' '
+        },
+        created: function () {
+            var self=this;
+            $.ajax({
+                url:server_url,
+                success:function (msg) {
+                    this.data=msg[0].tId;
+                },
+                error:function (xhr) {
+                    console.log(xhr);
+                }
+            })
+        }
+    })
+</script>
+
 </body>
 </html>

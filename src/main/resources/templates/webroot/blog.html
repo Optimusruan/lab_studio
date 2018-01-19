@@ -48,13 +48,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <div class="pull-left"><span><h1 > Lab 莱博</h1></span></div>
+                <a id="logo" class="pull-left" href="index.html"></a>
                 <div class="nav-collapse collapse pull-right">
                     <ul class="nav">
-                        <li><a href="index.html"><b><h3>主页</h3></b></a></li>
-                        <li><a href="404.html"><b><h3>教学设计</h3></b></a></li>
-                        <li class="active"><a href="blog.html"><b><h3>文章</h3></b></a></li><!--essay-->
-                    </ul>        
+                        <li class="active"><a href="index.html"><h3>主页</h3></a></li>
+                        <li><a href="blog.html"><h3>文章</h3></a></li>
+                        <li><a href="teach.html"><h3>教学工作</h3></a></li>
+                    </ul>
                 </div><!--/.nav-collapse -->
             </div>
         </div>
@@ -441,12 +441,27 @@
 <script src="js/main.js"></script>
 
 <script>
+    var server_url="#";
     new Vue({
         el:'#blog-item',
         data:{
-            message:'Duis sed odio sit amet nibh vulputate cursus'
+            message:' '
+        },
+        created:function(){
+            var self=this;
+            $.ajax({
+                url:server_url,
+                success:function (msg) {
+                    self.message=msg[0].tId;
+
+                },
+                error:function(xhr){
+                    console.log(xhr);
+                }
+            })
         }
     })
+
 </script>
 
 </body>
