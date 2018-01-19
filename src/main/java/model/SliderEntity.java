@@ -1,7 +1,14 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.HashSet;
+import java.util.Set;
 
 /*
  @Entity: 定义数据表对象
@@ -13,6 +20,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table (name = "lab_slider")
+@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class,property = "@Id")
 public class SliderEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -34,8 +42,14 @@ public class SliderEntity {
     @Column(name = "checked")
     private int checked;
 
-    @Column(name = "enable")
+    @Column(name = "enabled")
     private int enable;
+
+    @ManyToMany
+    @JoinTable(name = "lab_pic_slider",joinColumns={@JoinColumn(name = "slider_id",referencedColumnName = "slider_id")},inverseJoinColumns = {@JoinColumn(name = "file_id",referencedColumnName = "file_id")})
+
+    private Set<FileEntity> fileEntities = new HashSet<>();
+
 
     public Integer getSliderId() {
         return sliderId;
@@ -91,5 +105,13 @@ public class SliderEntity {
 
     public void setEnable(int enable) {
         this.enable = enable;
+    }
+
+    public Set<FileEntity> getFileEntities() {
+        return fileEntities;
+    }
+
+    public void setFileEntities(Set<FileEntity> fileEntities) {
+        this.fileEntities = fileEntities;
     }
 }
