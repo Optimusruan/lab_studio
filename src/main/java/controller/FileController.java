@@ -23,11 +23,21 @@ public class FileController {
 
 
     @RequestMapping(value = "/saveFile", method = RequestMethod.POST)
-    public @ResponseBody void saveFile(@RequestParam("files") MultipartFile[] files, RedirectAttributes redirectAttributes){
+    public @ResponseBody String saveFile(@RequestParam("files") MultipartFile[] files, RedirectAttributes redirectAttributes){
+        StringBuffer stringBuffer = new StringBuffer("");
         for(MultipartFile file:files) {
-            storageService.store(file);
-            redirectAttributes.addFlashAttribute("message", "Successfully! " + file.getOriginalFilename());
+            String temp = file.getOriginalFilename();
+            if(storageService.checkFileType(temp,storageService.TYPE_IMAGE))
+            {
+                storageService.store(file);
+            }
+            else {
+                stringBuffer.append("failed ").append(temp).append("\n");
+            }
+//            redirectAttributes.addFlashAttribute("message", "Successfully! " + file.getOriginalFilename());
         }
+
+        return stringBuffer.toString();
     }
 
     @RequestMapping("/uploadFile")

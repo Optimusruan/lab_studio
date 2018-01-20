@@ -10,6 +10,10 @@ import java.util.stream.Stream;
 @Component
 public interface StorageService {
 
+    final int TYPE_IMAGE = 1;//图片类型
+
+    final int TYPE_ARTICLE = 2;//文件类型
+
     void init();
 
     void store(MultipartFile file);
@@ -22,4 +26,5 @@ public interface StorageService {
 
     void deleteAll();
 
+    boolean checkFileType(String filename,int fileType);
 }
